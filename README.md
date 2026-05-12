@@ -1,0 +1,2 @@
+# kalkulator
+pelajaran bu mirna
