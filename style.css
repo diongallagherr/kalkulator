@@ -1,0 +1,123 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.calculator {
+  background: #2d2b55;
+  border-radius: 28px;
+  padding: 28px 24px 24px;
+  width: 320px;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+/* === DISPLAY === */
+.display {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 14px 20px;
+  text-align: right;
+  margin-bottom: 22px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.display .expr {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: #aaa;
+  min-height: 18px;
+}
+
+.display .result {
+  font-family: 'DM Mono', monospace;
+  font-size: 32px;
+  font-weight: 500;
+  color: #1a1a2e;
+  letter-spacing: -1px;
+  word-break: break-all;
+}
+
+/* === BUTTON GRID === */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  height: 62px;
+  cursor: pointer;
+  transition: transform 0.08s, filter 0.1s;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.93);
+}
+
+/* === BUTTON VARIANTS === */
+
+/* Angka - putih */
+.btn-num {
+  background: #f5f5f0;
+  color: #1a1a2e;
+  font-weight: 500;
+}
+.btn-num:hover {
+  filter: brightness(0.93);
+}
+
+/* Operator - biru/indigo */
+.btn-op {
+  background: #5a5adb;
+  color: #ffffff;
+}
+.btn-op:hover {
+  filter: brightness(1.15);
+}
+
+/* Clear - abu-abu biru */
+.btn-clear {
+  background: #8b8bcc;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.btn-clear:hover {
+  filter: brightness(1.1);
+}
+
+/* Sama dengan */
+.btn-eq {
+  background: #5a5adb;
+  color: #ffffff;
+  font-size: 22px;
+}
+.btn-eq:hover {
+  filter: brightness(1.2);
+}
+
+/* Angka 0 - span 2 kolom */
+.span2 {
+  grid-column: span 2;
+}

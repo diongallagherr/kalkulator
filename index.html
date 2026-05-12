@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalkulator Sederhana</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div class="expr" id="expr"></div>
+      <div class="result" id="layar">0</div>
+    </div>
+
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="btn-op" onclick="tambah('%')">%</button>
+      <button class="btn-op" onclick="tambah('**')">xʸ</button>
+      <button class="btn-op" onclick="hapus()">⌫</button>
+      <button class="btn-op" onclick="tambah('/')">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn-num" onclick="tambah('7')">7</button>
+      <button class="btn-num" onclick="tambah('8')">8</button>
+      <button class="btn-num" onclick="tambah('9')">9</button>
+      <button class="btn-op" onclick="tambah('*')">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn-num" onclick="tambah('4')">4</button>
+      <button class="btn-num" onclick="tambah('5')">5</button>
+      <button class="btn-num" onclick="tambah('6')">6</button>
+      <button class="btn-op" onclick="tambah('-')">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn-num" onclick="tambah('1')">1</button>
+      <button class="btn-num" onclick="tambah('2')">2</button>
+      <button class="btn-num" onclick="tambah('3')">3</button>
+      <button class="btn-op" onclick="tambah('+')">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn-num span2" onclick="tambah('0')">0</button>
+      <button class="btn-num" onclick="tambah('.')">.</button>
+      <button class="btn-eq" onclick="hitung()">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
